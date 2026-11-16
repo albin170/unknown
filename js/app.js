@@ -174,9 +174,16 @@
     let masterGain = null;
     let isPlaying = false;
     let sfxEnabled = true;
+    let hasUserGesture = false;
     let loopTimer = null;
     let stepIdx = 0;
     let volume = 0.55;
+
+    const markUserGesture = () => {
+      hasUserGesture = true;
+    };
+    window.addEventListener("pointerdown", markUserGesture, { once: true, passive: true });
+    window.addEventListener("keydown", markUserGesture, { once: true, passive: true });
 
     // Gentle music-box celebration notes (C5 major / dreamy intervals)
     const MELODY_NOTES = [
@@ -218,7 +225,7 @@
     };
 
     const playSfx = (kind = "pop") => {
-      if (!sfxEnabled) return;
+      if (!sfxEnabled || !hasUserGesture) return;
       if (kind === "pop") {
         playTone(660, 0.09, "triangle", 0.35, 0);
         playTone(990, 0.14, "sine", 0.3, 0.04);
@@ -242,6 +249,7 @@
     };
 
     const toggleMusic = () => {
+      hasUserGesture = true;
       const toggleBtn = document.getElementById("music-toggle-btn");
       const disc = document.getElementById("music-disc");
       const statusText = document.getElementById("music-status-text");
@@ -252,7 +260,7 @@
         loopTimer = null;
         if (toggleBtn) toggleBtn.textContent = "▶ Play";
         if (disc) disc.classList.remove("spinning");
-        if (statusText) statusText.textContent = "Paused • Click play anytime";
+        if (statusText) statusText.textContent = "Paused ♪";
         return;
       }
 
@@ -260,7 +268,7 @@
       isPlaying = true;
       if (toggleBtn) toggleBtn.textContent = "⏸ Pause";
       if (disc) disc.classList.add("spinning");
-      if (statusText) statusText.textContent = "Playing Birthday Music Box ♪";
+      if (statusText) statusText.textContent = "Music Box Playing ♪";
 
       const tick = () => {
         if (!isPlaying) return;
