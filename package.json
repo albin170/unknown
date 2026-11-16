@@ -1,0 +1,19 @@
+{
+  "name": "unknown",
+  "version": "1.0.0",
+  "description": "VYGA.EXE — The Ultimate Birthday Experience. Too iconic to be normal. Too ARMY to be ordinary.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 4173",
+    "dev": "python -m http.server 4173"
+  },
+  "keywords": [
+    "vyga",
+    "birthday",
+    "interactive",
+    "bts",
+    "army",
+    "scrapbook"
+  ],
+  "license": "MIT"
+}

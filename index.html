@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VYGA.EXE — The Ultimate Birthday Experience 💜🎀</title>
+  <meta name="description" content="VYGA.EXE — The World's Most Questionable Birthday Celebration. Too iconic to be normal. Too ARMY to be ordinary." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;700&family=Lora:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="gate-locked">
+  <a href="#main-content" class="skip-link">Skip to main celebration</a>
+
+  <!-- Global Celebration Overlays -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+  <div id="floating-particles" aria-hidden="true"></div>
+
+  <!-- ======================================================================
+       FIRST-PAGE BIRTHDAY COUNTDOWN GATE
+       ====================================================================== -->
+  <section id="countdown-gate" class="countdown-gate" aria-label="Birthday Countdown Entry Gate">
+    <div class="hero-aura hero-aura-1" aria-hidden="true"></div>
+    <div class="hero-aura hero-aura-2" aria-hidden="true"></div>
+
+    <div class="gate-card glass-card" id="gate-card">
+      <div class="gate-brand">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>VYGA.EXE</span>
+        <span class="brand-tag">PORTAL</span>
+      </div>
+
+      <div class="warning-badge" id="gate-badge">
+        <span class="warning-pulse" aria-hidden="true"></span>
+        <span>SYSTEM LOCKED // WAIT FOR 17/11/2026</span>
+      </div>
+
+      <h1 class="gate-title" id="gate-title">WAIT FOR IT, VYGA.</h1>
+      <p class="gate-subtitle" id="gate-subtitle">
+        Access to VYGA.EXE is sealed until the birthday countdown reaches zero on 17/11/2026.
+      </p>
+
+      <div class="countdown-grid gate-countdown-grid" aria-live="off">
+        <div class="countdown-box">
+          <span class="countdown-value" id="gate-days">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-value" id="gate-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-value" id="gate-minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-value" id="gate-seconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="gate-target-note" id="gate-target-note">
+        Unlock Date: November 17, 2026 (17/11/2026) 🎀
+      </p>
+
+      <div class="gate-actions">
+        <button type="button" class="btn btn-primary gate-enter-btn" id="gate-enter-btn" aria-disabled="true">
+          🔒 Locked Until Countdown Finishes (17/11/2026)
+        </button>
+      </div>
+
+      <p class="gate-feedback" id="gate-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       HEADER & SMOOTH NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-shell" aria-label="Main Navigation">
+      <a href="#home" class="brand-mark" title="THE WORLD'S MOST QUESTIONABLE BIRTHDAY CELEBRATION.">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>VYGA.EXE</span>
+        <span class="brand-tag">v.ICONIC</span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="primary-nav">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#breaking-news">Breaking News</a></li>
+        <li><a class="nav-link" href="#roast-awards">Roast Awards</a></li>
+        <li><a class="nav-link" href="#photo-museum">Photo Museum</a></li>
+        <li><a class="nav-link" href="#mini-games">Mini Games</a></li>
+        <li><a class="nav-link" href="#purple-universe">Purple Universe</a></li>
+        <li><a class="nav-link" href="#secret-vault">Secret Vault</a></li>
+        <li><a class="nav-link" href="#countdown">Birthday Countdown</a></li>
+        <li><a class="nav-link" href="#birthday-letter">Birthday Letter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         SECTION 1: HERO — THE BIRTHDAY INCIDENT
+         ==================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-aura hero-aura-1" aria-hidden="true"></div>
+      <div class="hero-aura hero-aura-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-tagline" id="hero-tagline">THE WORLD'S MOST QUESTIONABLE BIRTHDAY CELEBRATION.</p>
+
+          <div class="warning-badge" id="hero-badge">
+            <span class="warning-pulse" aria-hidden="true"></span>
+            <span>BIRTHDAY ALERT // STATUS: ACADEMICALLY SUSPICIOUS</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">OH NO. IT'S VYGA DAY.</h1>
+
+          <p class="hero-subtitle" id="hero-subtitle">
+            Breaking news: One academically suspicious human has completed another trip around the sun.
+          </p>
+
+          <p class="hero-authority" id="hero-authority">
+            Authorities have confirmed that Vyga has officially become one year older. Her maturity level, however, remains under investigation.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#breaking-news" class="btn btn-primary" id="enter-experience-btn">
+              Enter the Birthday Experience
+              <span aria-hidden="true">🎀</span>
+            </a>
+            <button type="button" class="btn btn-secondary" id="surprise-me-btn">
+              Surprise Me
+              <span aria-hidden="true">🎉</span>
+            </button>
+          </div>
+
+          <div class="hero-surprise-toast" id="hero-surprise-toast" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="hero-stage glass-card tilt-card">
+          <div class="sticker sticker-1">CERTIFIED DRAMA QUEEN ✨</div>
+          <div class="sticker sticker-2">ARMY MODE: ON 💜</div>
+          <div class="sticker sticker-3">NO ASSIGNMENTS TODAY</div>
+          <div class="sticker sticker-4">CAKE LEVEL: 100% 🎂</div>
+
+          <!-- Decorative SVG Ribbon -->
+          <svg class="ribbon-decor ribbon-top" viewBox="0 0 100 50" fill="none" aria-hidden="true">
+            <path d="M50 25C30 4 8 8 10 25C12 42 36 38 50 25Z" fill="#FF4F91" fill-opacity="0.78" />
+            <path d="M50 25C70 4 92 8 90 25C88 42 64 38 50 25Z" fill="#8B5CF6" fill-opacity="0.78" />
+            <circle cx="50" cy="25" r="7" fill="#FFF9F5" stroke="#38243A" stroke-width="2" />
+          </svg>
+
+          <button
+            type="button"
+            class="cake-stage-btn"
+            id="hero-cake-btn"
+            aria-label="Interactive birthday cake. Click to blow out or relight candles."
+          >
+            <div class="cake-3d" id="hero-cake">
+              <div class="cake-candles" aria-hidden="true">
+                <div class="candle"><span class="candle-flame"></span></div>
+                <div class="candle"><span class="candle-flame"></span></div>
+                <div class="candle"><span class="candle-flame"></span></div>
+              </div>
+              <div class="cake-tier cake-tier-top" aria-hidden="true"></div>
+              <div class="cake-tier cake-tier-mid" aria-hidden="true"></div>
+              <div class="cake-tier cake-tier-base" aria-hidden="true"></div>
+              <div class="cake-plate" aria-hidden="true"></div>
+            </div>
+            <span class="cake-caption" id="cake-caption">Tap the 3D cake to blow out candles &amp; make a wish ✨</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: FAKE BREAKING NEWS
+         ==================================================================== -->
+    <section id="breaking-news" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">📺 LIVE BROADCAST // VNN</span>
+          <h2 class="section-title">THE BIRTHDAY NEWS DESK</h2>
+          <p class="section-subtitle">Unfiltered, deeply researched journalism covering today's biggest campus incident.</p>
+        </header>
+
+        <div class="news-broadcast-bar" aria-label="Breaking news ticker">
+          <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> LIVE</span>
+          <div class="ticker-viewport">
+            <div class="ticker-track" id="news-ticker-track"></div>
+          </div>
+        </div>
+
+        <div class="news-hero-desk">
+          <article class="glass-card news-headline-panel tilt-card">
+            <div class="news-channel-tag" id="news-channel-tag">VNN • VYGA NEWS NETWORK</div>
+            <h3 class="news-main-headline" id="news-main-headline">
+              BREAKING: LOCAL CLASSMATE GETS OLDER. STILL NOT WISER.
+            </h3>
+            <p class="section-subtitle" style="margin:0;" id="news-sub-banner">
+              LIVE DESK COVERAGE • CLASSROOM CHAOS DIVISION • SPECIAL BIRTHDAY EDITION
+            </p>
+          </article>
+
+          <aside class="glass-card news-reporter-box">
+            <div>
+              <div class="reporter-header">
+                <div class="reporter-avatar" id="reporter-avatar" aria-hidden="true">M</div>
+                <div class="reporter-meta">
+                  <strong id="reporter-name">Correspondent Mia</strong>
+                  <small id="reporter-location">Outside Lecture Hall B</small>
+                </div>
+              </div>
+              <p class="reporter-quote" id="reporter-quote" style="margin-top: 14px;"></p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" id="next-reporter-btn">
+              Switch Field Reporter 🎙️
+            </button>
+          </aside>
+        </div>
+
+        <div class="news-grid" id="news-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: THE VYGA ROAST AWARDS
+         ==================================================================== -->
+    <section id="roast-awards" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">🏆 ANNUAL COMEDY CEREMONY</span>
+          <h2 class="section-title">THE VYGA ROAST AWARDS</h2>
+          <p class="section-subtitle">
+            Eight prestigious trophies recognizing her unmatched dedication to chaos, timing, and dramatic flair.
+          </p>
+        </header>
+
+        <div class="glass-card awards-toolbar">
+          <div class="awards-progress-wrap">
+            <strong id="awards-progress-label">0 / 8 Awards Revealed</strong>
+            <div class="awards-progress-bar" aria-hidden="true">
+              <div class="awards-progress-fill" id="awards-progress-fill"></div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="reveal-all-awards-btn">
+            Reveal All Trophies 🏆
+          </button>
+        </div>
+
+        <div class="awards-grid" id="awards-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: THE MUSEUM OF VYGA
+         ==================================================================== -->
+    <section id="photo-museum" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">📸 DIGITAL SCRAPBOOK</span>
+          <h2 class="section-title">THE MUSEUM OF VYGA</h2>
+          <p class="section-subtitle">
+            Upload real photos, edit the funny captions directly on the frames, click any exhibit for full view, or clear placeholders anytime.
+          </p>
+        </header>
+
+        <div class="upload-dropzone glass-card" id="upload-dropzone">
+          <p style="margin: 0; font-weight: 700; font-size: 1.05rem;">
+            Drag &amp; drop Vyga's iconic photos here, or upload multiple pictures at once
+          </p>
+          <p style="margin: 6px 0 0; font-size: 0.9rem; color: var(--plum-muted);">
+            Your uploaded photos and custom captions stay saved right in this browser.
+          </p>
+          <div class="upload-actions">
+            <label class="btn btn-primary btn-sm" for="photo-upload-input" tabindex="0">
+              Upload Photos 📸
+            </label>
+            <input type="file" id="photo-upload-input" accept="image/*" multiple class="sr-only" />
+            <button type="button" class="btn btn-secondary btn-sm" id="reset-museum-btn">
+              Restore Default Exhibits
+            </button>
+          </div>
+        </div>
+
+        <div class="scrapbook-grid" id="scrapbook-grid"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: INTERACTIVE MINI GAMES
+         ==================================================================== -->
+    <section id="mini-games" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">🎮 BIRTHDAY ARCADE</span>
+          <h2 class="section-title">INTERACTIVE MINI GAMES</h2>
+          <p class="section-subtitle">
+            Three genuinely playable challenges. Zero fake buttons. Pure chaotic fun.
+          </p>
+        </header>
+
+        <div class="games-tabs" role="tablist" aria-label="Mini Games">
+          <button type="button" class="game-tab-btn active" role="tab" aria-selected="true" data-game-tab="quiz">
+            1. How Well Do You Know Vyga?
+          </button>
+          <button type="button" class="game-tab-btn" role="tab" aria-selected="false" data-game-tab="cake">
+            2. Catch the Birthday Cake
+          </button>
+          <button type="button" class="game-tab-btn" role="tab" aria-selected="false" data-game-tab="mystery">
+            3. Guess the Mystery
+          </button>
+        </div>
+
+        <!-- Game 1: Quiz -->
+        <div class="glass-card game-panel active" id="game-panel-quiz" role="tabpanel">
+          <div id="quiz-container"></div>
+        </div>
+
+        <!-- Game 2: Catch the Birthday Cake -->
+        <div class="glass-card game-panel" id="game-panel-cake" role="tabpanel">
+          <div class="cake-hud">
+            <span class="hud-pill">⏱️ Time: <span id="cake-timer">7.0</span>s</span>
+            <span class="hud-pill">🎂 Caught: <span id="cake-score">0</span></span>
+            <span class="hud-pill">🏆 Best: <span id="cake-best">0</span></span>
+          </div>
+          <div class="cake-arena" id="cake-arena">
+            <button type="button" class="cake-target" id="cake-target" style="display:none;" aria-label="Catch the birthday cake">
+              🎂
+            </button>
+            <div class="cake-arena-overlay" id="cake-overlay">
+              <h3 style="font-family:var(--font-display); margin:0 0 8px;">7-Second Cake Reflex Challenge</h3>
+              <p id="cake-result-msg" style="margin:0 0 18px; max-width:440px; color:var(--plum-muted);">
+                Click the teleporting birthday cake as many times as you can in 7 seconds. Every catch makes it faster!
+              </p>
+              <button type="button" class="btn btn-primary" id="start-cake-game-btn">
+                Start 7s Challenge 🎂
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 3: Guess the Mystery -->
+        <div class="glass-card game-panel" id="game-panel-mystery" role="tabpanel">
+          <div id="mystery-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: VYGA'S PURPLE UNIVERSE — BTS / ARMY ZONE
+         ==================================================================== -->
+    <section id="purple-universe" class="section purple-universe">
+      <div class="starfield" id="purple-starfield" aria-hidden="true"></div>
+
+      <div class="container" style="position:relative; z-index:2;">
+        <header class="section-header">
+          <span class="section-kicker">💜 BTS / ARMY ZONE</span>
+          <h2 class="section-title" id="purple-title">VYGA'S PURPLE UNIVERSE</h2>
+          <p class="section-subtitle" id="purple-subtitle">
+            Because ordinary birthday celebrations are not enough for an ARMY.
+          </p>
+        </header>
+
+        <!-- A. Borahae Button + E. Purple Celebration -->
+        <div class="purple-glass borahae-banner">
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
+            <button type="button" class="btn btn-borahae" id="borahae-btn">
+              PRESS FOR PURPLE HAPPINESS 💜
+            </button>
+            <button type="button" class="btn btn-secondary" id="purple-confetti-btn">
+              Launch Purple Celebration ✨
+            </button>
+          </div>
+          <div class="borahae-reveal-msg" id="borahae-msg" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="purple-grid">
+          <!-- B. ARMY Award -->
+          <article class="purple-glass army-award-card tilt-card">
+            <div class="army-crest" aria-hidden="true">💜</div>
+            <span class="award-badge" style="background:rgba(220,203,255,0.22); color:#f5ecff;" id="army-award-badge">
+              BTS • ARMY SPECIAL CITATION
+            </span>
+            <h3 style="font-family:var(--font-display); font-size:1.55rem; margin:12px 0;" id="army-award-title">
+              OFFICIAL ARMY MEMBER OF THE YEAR
+            </h3>
+            <p style="color:rgba(255,249,245,0.86); margin:0 0 20px;" id="army-award-desc">
+              For maintaining loyalty through every comeback, every concert-ticket struggle and every BTS-related emotional event.
+            </p>
+            <button type="button" class="btn btn-purple btn-sm" id="verify-army-btn">
+              Verify ARMY Status 💜
+            </button>
+            <p id="army-verified-note" style="margin:12px 0 0; font-size:0.88rem; color:var(--pastel-pink); font-weight:700;"></p>
+          </article>
+
+          <!-- C. BTS Playlist -->
+          <article class="purple-glass bts-playlist-card">
+            <div class="playlist-header">
+              <label for="playlist-name-input" class="sr-only">Custom BTS playlist name</label>
+              <input
+                type="text"
+                id="playlist-name-input"
+                class="playlist-title-input"
+                value="Vyga's Birthday Purple Universe Playlist 💜"
+              />
+              <button type="button" class="btn btn-secondary btn-sm" id="open-add-song-btn">
+                + Add BTS Song
+              </button>
+            </div>
+            <div class="playlist-list" id="bts-playlist-list"></div>
+          </article>
+        </div>
+
+        <!-- D. Secret BTS Surprise -->
+        <div class="purple-glass ot7-secret-card">
+          <h3 style="font-family:var(--font-display); margin:0 0 6px;">Secret ARMY Constellation</h3>
+          <p id="ot7-prompt" style="margin:0; color:rgba(255,249,245,0.82);">
+            Tap all 7 Purple Stars (OT7) to unlock the hidden ARMY wish ✨
+          </p>
+          <div class="ot7-stars" id="ot7-stars" role="group" aria-label="Seven OT7 purple stars"></div>
+          <div class="borahae-reveal-msg" id="ot7-secret-msg" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: SECRET BIRTHDAY VAULT
+         ==================================================================== -->
+    <section id="secret-vault" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">🔐 CLASSIFIED ACCESS</span>
+          <h2 class="section-title">SECRET BIRTHDAY VAULT</h2>
+          <p class="section-subtitle">
+            Enter the secret keyword to unlock Vyga's classified birthday reward.
+          </p>
+        </header>
+
+        <div class="glass-card vault-card">
+          <div class="vault-lock-wrap" id="vault-lock-icon" aria-hidden="true">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="3" />
+              <path id="vault-shackle" d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+
+          <form class="vault-form" id="vault-form">
+            <label for="vault-password-input" class="sr-only">Secret Vault Password</label>
+            <input
+              type="text"
+              id="vault-password-input"
+              class="text-input"
+              placeholder="Enter secret answer (try: birthday)"
+              autocomplete="off"
+            />
+            <button type="submit" class="btn btn-primary">Unlock Vault 🔓</button>
+          </form>
+
+          <button type="button" class="btn btn-ghost btn-sm" id="vault-hint-btn">Need a Hint? 👀</button>
+          <p class="vault-feedback" id="vault-feedback" role="status" aria-live="polite"></p>
+
+          <div class="vault-unlocked-panel" id="vault-unlocked-panel">
+            <h3 style="font-family:var(--font-display); margin:0 0 10px; font-size:1.65rem;" id="vault-unlock-heading"></h3>
+            <p id="vault-unlock-message" style="margin:0 0 14px; font-weight:600;"></p>
+            <p id="vault-unlock-reward" style="margin:0; white-space:pre-line; color:var(--deep-purple); font-weight:700;"></p>
+            <div class="vip-coupon" id="vault-vip-coupon"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 8: BIRTHDAY COUNTDOWN
+         ==================================================================== -->
+    <section id="countdown" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">⏳ CHRONO TRACKER</span>
+          <h2 class="section-title">BIRTHDAY COUNTDOWN</h2>
+          <p class="section-subtitle" id="countdown-subtitle">
+            Tracking the official countdown to Vyga Day — configure her exact date anytime.
+          </p>
+        </header>
+
+        <div class="glass-card countdown-shell">
+          <div class="birthday-day-banner" id="birthday-day-banner">
+            <h3 style="font-family:var(--font-display); font-size:1.85rem; margin:0 0 6px;">
+              🎉 IT IS OFFICIALLY VYGA DAY TODAY! 🎉
+            </h3>
+            <p style="margin:0;">Zero assignments allowed. 100% cake &amp; purple happiness activated!</p>
+          </div>
+
+          <div class="countdown-grid" id="countdown-grid" aria-live="off">
+            <div class="countdown-box">
+              <span class="countdown-value" id="cd-days">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-value" id="cd-hours">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-value" id="cd-minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-value" id="cd-seconds">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+
+          <p id="countdown-status-note" style="font-family:var(--font-mono); font-size:0.84rem; color:var(--deep-purple); margin:0;"></p>
+
+          <div class="countdown-config-bar">
+            <label for="birthday-date-picker" style="font-weight:700; font-size:0.9rem;">
+              Set Vyga's Birthday Date:
+            </label>
+            <input type="date" id="birthday-date-picker" class="text-input" value="2026-11-17" style="max-width:200px; flex:0 1 auto;" />
+            <button type="button" class="btn btn-secondary btn-sm" id="toggle-bday-preview-btn">
+              Preview Birthday Day 🎉
+            </button>
+            <button type="button" class="btn btn-ghost btn-sm" id="reopen-gate-btn">
+              Back to Countdown Gate ⏳
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 9: FINAL BIRTHDAY LETTER
+         ==================================================================== -->
+    <section id="birthday-letter" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">💌 FROM YOUR CLASSMATE &amp; FRIEND</span>
+          <h2 class="section-title">A REAL NOTE FOR VYGA</h2>
+          <p class="section-subtitle">
+            Jokes aside, here is a genuine birthday wish from your fellow classroom survivor.
+          </p>
+        </header>
+
+        <article class="letter-paper">
+          <div class="letter-wax-seal" aria-hidden="true">🎀</div>
+          <div class="letter-body" id="letter-display"></div>
+
+          <div class="letter-actions">
+            <span style="font-size:0.85rem; color:var(--plum-muted);">
+              Want to personalize a line? Edit right here or in <code>js/config.js</code>.
+            </span>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button type="button" class="btn btn-secondary btn-sm" id="toggle-letter-edit-btn">
+                Customize Letter ✏️
+              </button>
+              <button type="button" class="btn btn-ghost btn-sm" id="reset-letter-btn">
+                Reset Default
+              </button>
+            </div>
+          </div>
+
+          <div class="letter-editor" id="letter-editor">
+            <label for="letter-textarea" class="sr-only">Customize birthday letter text</label>
+            <textarea id="letter-textarea" class="letter-textarea"></textarea>
+            <div style="margin-top:10px; display:flex; justify-content:flex-end;">
+              <button type="button" class="btn btn-primary btn-sm" id="save-letter-btn">Save Letter 💌</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FINAL SURPRISE EXPERIENCE TRIGGER
+         ==================================================================== -->
+    <section id="final-surprise" class="finale-section">
+      <div class="container">
+        <button type="button" class="btn btn-finale" id="final-surprise-btn">
+          ONE LAST THING FOR YOU 💗
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-tagline" style="margin:0;">
+      VYGA.EXE — TOO ICONIC TO BE NORMAL. TOO ARMY TO BE ORDINARY. 💜🎀
+    </p>
+  </footer>
+
+  <!-- ======================================================================
+       FLOATING MUSIC & CELEBRATION CONTROL DOCK
+       ====================================================================== -->
+  <aside class="music-dock" id="music-dock" aria-label="Music and Celebration Controls">
+    <div class="music-dock-header">
+      <div class="music-title-group">
+        <div class="music-disc" id="music-disc" aria-hidden="true">🎵</div>
+        <div>
+          <strong style="font-size:0.88rem; display:block;">Birthday Audio Box</strong>
+          <small id="music-status-text" style="font-size:0.74rem; color:var(--plum-muted);">Click play to start melody</small>
+        </div>
+      </div>
+      <div style="display:flex; gap:6px;">
+        <button type="button" class="btn btn-primary btn-sm" id="music-toggle-btn" aria-label="Play or pause background music">
+          ▶ Play
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm" id="dock-collapse-btn" aria-expanded="true" aria-label="Collapse or expand music panel">
+          −
+        </button>
+      </div>
+    </div>
+
+    <div class="music-dock-body">
+      <div class="music-controls-row">
+        <label for="volume-slider" style="font-size:0.78rem; font-weight:700;">Vol</label>
+        <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="55" />
+        <button type="button" class="btn btn-ghost btn-sm" id="sfx-toggle-btn" aria-pressed="true">
+          SFX: ON
+        </button>
+      </div>
+
+      <div class="celebration-triggers">
+        <button type="button" id="trigger-confetti-btn">🎊 Confetti</button>
+        <button type="button" id="trigger-hearts-btn">💜 Hearts</button>
+        <button type="button" id="trigger-cake-btn">🎂 Cake Bounce</button>
+        <a id="external-music-link" href="https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX" target="_blank" rel="noopener noreferrer">
+          🎧 Open BTS Spotify
+        </a>
+        <button type="button" id="set-custom-music-btn">🔗 Custom Link</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       MODALS (NEWS ARTICLE, PHOTO LIGHTBOX, ADD SONG, FINAL CELEBRATION)
+       ====================================================================== -->
+  <div class="modal-backdrop" id="generic-modal" role="dialog" aria-modal="true" aria-labelledby="generic-modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="generic-modal-close" aria-label="Close modal">✕</button>
+      <h3 id="generic-modal-title" style="font-family:var(--font-display); margin:0 0 12px; padding-right:42px;"></h3>
+      <div id="generic-modal-body"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="finale-modal" role="dialog" aria-modal="true" aria-labelledby="finale-modal-heading">
+    <div class="modal-dialog finale-modal-dialog">
+      <button type="button" class="modal-close" id="finale-modal-close" aria-label="Close final celebration">✕</button>
+      <div class="finale-cake-icon" aria-hidden="true">🎂</div>
+      <h2 class="finale-heading" id="finale-modal-heading">HAPPY BIRTHDAY, VYGA!</h2>
+      <div id="finale-modal-body" style="font-size:1.18rem; line-height:1.75;"></div>
+      <div style="margin-top:26px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" id="finale-more-confetti-btn">More Confetti &amp; Hearts 💜🎀</button>
+        <button type="button" class="btn btn-secondary" id="finale-done-btn">Back to Party</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
